@@ -1,0 +1,33 @@
+graph,metric,value,is_exact,note
+G_u,num_nodes,169343,True,
+G_u,num_edges,1157799,True,
+G_u,mean_degree,13.674010735607613,True,2m/n
+G_u,max_degree,13161,True,
+G_u,density,8.074789913670332e-05,True,2m/(n(n-1))
+G_u,average_local_clustering,0.25745357344617203,True,mean of C_i over nodes with degree >= 2 (course convention)
+G_u,average_local_clustering_all_nodes,0.22612914062470948,True,mean of C_i over all nodes with C_i = 0 for degree < 2 (networkx convention)
+G_u,transitivity,0.01620149151351999,True,3 x triangles / connected triples
+G_u,num_triangles,2233524,True,
+G_u,num_connected_components,1,True,
+G_u,largest_component_size,169343,True,
+G_u,largest_component_fraction,1.0,True,
+G_u,num_isolated_nodes,0,True,
+G_u,average_distance,5.750051843728483,True,"on largest connected component of G_u (169343 nodes, 100.0000% of all nodes); exact all-pairs BFS (bit-parallel multi-source BFS, all nodes as sources)"
+G_u,diameter,25,True,"on largest connected component of G_u (169343 nodes, 100.0000% of all nodes); exact all-pairs BFS (bit-parallel multi-source BFS, all nodes as sources)"
+G_d,num_nodes,169343,True,
+G_d,num_edges,1166243,True,
+G_d,mean_in_degree,6.886868663009395,True,m/n
+G_d,mean_out_degree,6.886868663009395,True,m/n
+G_d,max_in_degree,13155,True,
+G_d,max_out_degree,436,True,
+G_d,density,4.066840277668502e-05,True,m/(n(n-1))
+G_d,reciprocity,0.014480687129526179,True,
+G_d,is_dag,False,True,
+G_d,num_weakly_connected_components,1,True,
+G_d,largest_wcc_size,169343,True,
+G_d,num_strongly_connected_components,141223,True,
+G_d,num_nontrivial_sccs,2810,True,
+G_d,largest_scc_size,23164,True,
+G_d->G_u,directed_self_loops,0,True,
+G_d->G_u,duplicate_directed_edges,0,True,
+G_d->G_u,reciprocal_pairs_merged,8444,True,

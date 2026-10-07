@@ -1,0 +1,11 @@
+instance,num_nodes,num_sources,repeats,exact_average_distance,mean_approx_average_distance,mean_abs_relative_error,max_abs_relative_error,ci95_coverage,exact_diameter,min_diameter_lower,max_diameter_lower,fraction_lower_equals_exact,bounds_always_hold
+bfs_ball_500,500,16,5,3.50378,3.55468,0.0236274,0.0533989,1,6,6,6,1,True
+bfs_ball_500,500,64,5,3.50378,3.52779,0.0119828,0.0350695,1,6,6,6,1,True
+bfs_ball_500,500,256,5,3.50378,3.49628,0.00705397,0.0156066,0.8,6,6,6,1,True
+bfs_ball_2000,2000,16,5,2.78875,2.81198,0.0307401,0.072208,0.8,4,4,4,1,True
+bfs_ball_2000,2000,64,5,2.78875,2.76403,0.00886342,0.0287109,0.8,4,4,4,1,True
+bfs_ball_2000,2000,256,5,2.78875,2.78864,0.00870449,0.0170896,0.6,4,4,4,1,True
+bfs_ball_5000,5000,16,5,3.1457,3.08984,0.025875,0.0585897,1,9,9,9,1,True
+bfs_ball_5000,5000,64,5,3.1457,3.27842,0.0421905,0.0636652,1,9,9,9,1,True
+bfs_ball_5000,5000,256,5,3.1457,3.16955,0.0243047,0.0387112,1,9,9,9,1,True
+largest_component,169343,512,1,5.75005,5.83696,0.0151143,0.0151143,1,25,24,24,0,True

@@ -1,0 +1,64 @@
+# Full ogbn-arxiv run. Relative paths are resolved from the repository root.
+# MO438_DATA_DIR / MO438_OUTPUT_DIR (env) relocate data/ and outputs/ (e.g. to a scratch FS).
+project:
+  name: mo438-f1
+  seed: 438
+
+data:
+  dataset: ogbn-arxiv            # ogbn-arxiv | synthetic
+  source_url: http://snap.stanford.edu/ogb/data/nodeproppred/arxiv.zip
+  raw_dir: data/raw              # cached arxiv.zip (~83 MB)
+  processed_dir: data/processed  # parsed arrays (.npz) + distance cache
+  graphml_dir: outputs/graphml
+  directed_graphml: outputs/graphml/ogbn_arxiv_directed.graphml
+  undirected_graphml: outputs/graphml/ogbn_arxiv_undirected.graphml
+  area_graphml: outputs/graphml/ogbn_arxiv_area_graph.graphml
+  remove_self_loops: true        # G_u is a simple graph (self-loops dropped, counted in summary)
+
+outputs:
+  metrics_dir: outputs/metrics
+  figures_dir: outputs/figures
+  logs_dir: outputs/logs
+
+metrics:
+  undirected:
+    compute_local_clustering: true
+    compute_global_average_clustering: true
+    compute_transitivity: true
+    compute_density: true
+    compute_components: true
+    compute_average_shortest_path: true
+    compute_diameter: true
+  directed:
+    compute_degree_distributions: true
+    compute_weak_components: true
+    compute_strong_components: true
+  compute_area_graph: true       # 40x40 citation matrix between primary categories (G_A)
+
+paths:
+  use_largest_connected_component_for_distances: true
+  mode: auto                     # exact | approximate | auto
+  max_exact_seconds: 21600       # auto: use exact if the estimated wall time is below this
+  batch_words: 1                 # MS-BFS batch = 64 * batch_words sources
+  approximation:
+    num_sources: 512             # sampled BFS sources (approximate mode)
+    diameter_sweeps: 4           # double-sweep BFS runs for the diameter lower bound
+    validation_enabled: true
+    validation_sizes: [500, 2000, 5000]
+    validation_num_sources: [16, 64, 256]
+    validation_repeats: 5
+
+plots:
+  dpi: 180
+  degree_log_x: true
+  degree_log_y: true
+  bins: 80
+  sample_visualization: true
+  sample_size: 1500
+  area_graph_top_edges: 80
+
+runtime:
+  n_jobs: auto                   # auto = $SLURM_CPUS_PER_TASK or available CPUs
+  force_download: false
+  force_rebuild_graphs: false
+  force_recompute_metrics: false

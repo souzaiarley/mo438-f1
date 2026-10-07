@@ -1,0 +1,62 @@
+2026-10-06 16:39:33 | INFO    | mo438-f1 0.1.0 | config config/default.yaml | dataset ogbn-arxiv | seed 438 | n_jobs 16
+2026-10-06 16:39:33 | INFO    | [stage] load dataset ...
+2026-10-06 16:39:33 | INFO    | Loaded processed cache data/processed/ogbn_arxiv_citations.npz
+2026-10-06 16:39:33 | INFO    | [stage] load dataset done in 0.05 s, peak RSS 141 MiB
+2026-10-06 16:39:33 | INFO    | Dataset ogbn-arxiv: 169343 nodes, 1166243 directed edges, 40 categories
+2026-10-06 16:39:33 | INFO    | [stage] build G_d and G_u ...
+2026-10-06 16:39:35 | INFO    | [stage] build G_d and G_u done in 2.09 s, peak RSS 479 MiB
+2026-10-06 16:39:35 | INFO    | G_u: 1157799 edges (self-loops 0, duplicates 0, reciprocal pairs merged 8444)
+2026-10-06 16:39:35 | INFO    | [stage] export GraphML ...
+2026-10-06 16:39:35 | INFO    | GraphML outputs/graphml/ogbn_arxiv_directed.graphml already exists (use --force-rebuild to rewrite)
+2026-10-06 16:39:35 | INFO    | GraphML outputs/graphml/ogbn_arxiv_undirected.graphml already exists (use --force-rebuild to rewrite)
+2026-10-06 16:39:35 | INFO    | [stage] export GraphML done in 0.01 s, peak RSS 479 MiB
+2026-10-06 16:39:35 | INFO    | [stage] G_u metrics (degree, clustering, density, components) ...
+2026-10-06 16:39:35 | INFO    | [stage] G_u metrics (degree, clustering, density, components) done in 0.52 s, peak RSS 479 MiB
+2026-10-06 16:39:35 | INFO    | G_u: <k>=13.6740 density=8.075e-05 avgC=0.2575 transitivity=0.0162 components=1 LCC=169343 (100.00%)
+2026-10-06 16:39:36 | INFO    | [stage] distances on the largest connected component ...
+2026-10-06 16:39:36 | INFO    | Exact path computation estimated at 88 s (705 CPU-s) with 16 worker(s); limit 21600 s -> exact
+2026-10-06 16:40:02 | INFO    | exact all-pairs MS-BFS: 265/2646 batches (10%), elapsed 26.2 s, ETA 235.1 s
+2026-10-06 16:40:27 | INFO    | exact all-pairs MS-BFS: 530/2646 batches (20%), elapsed 51.0 s, ETA 203.7 s
+2026-10-06 16:40:51 | INFO    | exact all-pairs MS-BFS: 795/2646 batches (30%), elapsed 75.1 s, ETA 174.9 s
+2026-10-06 16:41:15 | INFO    | exact all-pairs MS-BFS: 1060/2646 batches (40%), elapsed 99.3 s, ETA 148.6 s
+2026-10-06 16:41:41 | INFO    | exact all-pairs MS-BFS: 1325/2646 batches (50%), elapsed 124.5 s, ETA 124.1 s
+2026-10-06 16:42:05 | INFO    | exact all-pairs MS-BFS: 1590/2646 batches (60%), elapsed 148.4 s, ETA 98.6 s
+2026-10-06 16:42:28 | INFO    | exact all-pairs MS-BFS: 1855/2646 batches (70%), elapsed 172.0 s, ETA 73.3 s
+2026-10-06 16:42:53 | INFO    | exact all-pairs MS-BFS: 2120/2646 batches (80%), elapsed 196.5 s, ETA 48.8 s
+2026-10-06 16:43:17 | INFO    | exact all-pairs MS-BFS: 2385/2646 batches (90%), elapsed 221.0 s, ETA 24.2 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 2646/2646 batches (100%), elapsed 243.8 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | [stage] distances on the largest connected component done in 244.19 s, peak RSS 479 MiB
+2026-10-06 16:43:40 | INFO    | Distances (EXACT) on largest connected component of G_u (169343 nodes): <d>=5.7501, diameter=25 [25, 25]
+2026-10-06 16:43:40 | INFO    | [stage] validation of the distance approximation ...
+2026-10-06 16:43:40 | INFO    | Validation subgraph |V|=500 |E|=1158: exact <d>=3.5038 diam=6 (igraph 3.5038, 6)
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 4/32 batches (12%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 8/32 batches (25%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 12/32 batches (38%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 16/32 batches (50%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 20/32 batches (62%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 24/32 batches (75%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 28/32 batches (88%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | exact all-pairs MS-BFS: 32/32 batches (100%), elapsed 0.0 s, ETA 0.0 s
+2026-10-06 16:43:40 | INFO    | Validation subgraph |V|=2000 |E|=11994: exact <d>=2.7887 diam=4 (igraph 2.7887, 4)
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 8/79 batches (10%), elapsed 0.0 s, ETA 0.2 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 16/79 batches (20%), elapsed 0.0 s, ETA 0.2 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 24/79 batches (30%), elapsed 0.1 s, ETA 0.2 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 32/79 batches (41%), elapsed 0.1 s, ETA 0.1 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 40/79 batches (51%), elapsed 0.1 s, ETA 0.1 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 48/79 batches (61%), elapsed 0.1 s, ETA 0.1 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 56/79 batches (71%), elapsed 0.2 s, ETA 0.1 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 64/79 batches (81%), elapsed 0.2 s, ETA 0.0 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 72/79 batches (91%), elapsed 0.2 s, ETA 0.0 s
+2026-10-06 16:43:41 | INFO    | exact all-pairs MS-BFS: 79/79 batches (100%), elapsed 0.2 s, ETA 0.0 s
+2026-10-06 16:43:42 | INFO    | Validation subgraph |V|=5000 |E|=29134: exact <d>=3.1457 diam=9 (igraph 3.1457, 9)
+2026-10-06 16:43:43 | INFO    | [stage] validation of the distance approximation done in 3.54 s, peak RSS 479 MiB
+2026-10-06 16:43:43 | INFO    | [stage] G_d metrics (in/out degree, weak/strong components) ...
+2026-10-06 16:43:44 | INFO    | [stage] G_d metrics (in/out degree, weak/strong components) done in 0.24 s, peak RSS 479 MiB
+2026-10-06 16:43:44 | INFO    | [stage] aggregated area graph G_A ...
+2026-10-06 16:43:44 | INFO    | Wrote outputs/graphml/ogbn_arxiv_area_graph.graphml (0.1 MB)
+2026-10-06 16:43:44 | INFO    | [stage] aggregated area graph G_A done in 0.02 s, peak RSS 479 MiB
+2026-10-06 16:43:44 | INFO    | [stage] figures ...
+2026-10-06 16:43:45 | INFO    | G_u is connected: component size figure not generated
+2026-10-06 16:43:48 | INFO    | [stage] figures done in 4.70 s, peak RSS 479 MiB
+2026-10-06 16:43:48 | INFO    | Wrote outputs/metrics/summary.json and outputs/metrics/summary.csv
+2026-10-06 16:43:48 | INFO    | Pipeline finished in 255.4 s (peak RSS 479 MiB)
